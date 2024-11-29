@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Locality Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&family=PT+Serif:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style3.css') }}">
 </head>
 <body>
     <h2>Search for Locality</h2>
@@ -14,11 +16,11 @@
         <button type="submit">Enter</button>
     </form>
 
-    <div>
+    <div class="boxed">
         {% if locality_info %}
             <h3>Incidents:</h3>
             {% for locality in locality_info %}
-            <div style="border: 1px solid black; padding: 10px; margin-bottom: 10px;">
+            <div class="inner" style="border: 1px solid black; padding: 10px; margin-bottom: 10px;">
                 <p><strong>ID:</strong> {{ locality[0] }}</p>
                 <p><strong>DID:</strong> {{ locality[1] }}</p>
                 <p><strong>LID:</strong> {{ locality[2] }}</p>
